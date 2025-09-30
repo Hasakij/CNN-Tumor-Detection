@@ -185,21 +185,25 @@ def threshold(scores, threshold_value=0.5):
 
 accuracy = accuracy_score(y_true, threshold(outputs))
 print(f"Final Model Accuracy on Validation Set: {accuracy:.4f}")
-
+if not os.path.exists('results'):
+    os.makedirs('results')
 # Plot confusion matrix
 cm = confusion_matrix(y_true, threshold(outputs))
 plt.figure(figsize=(8, 6))
 sns.heatmap(cm, annot=True, fmt='g', cmap='Blues', xticklabels=['Healthy', 'Tumor'], yticklabels=['Healthy', 'Tumor'])
 plt.xlabel('Predicted Labels'); plt.ylabel('True Labels'); plt.title('Confusion Matrix')
+plt.savefig('results/confusion_matrix.png', dpi=300)
 plt.show()
+plt.close()
 
 # Plot loss curves
 plt.figure(figsize=(12, 6))
 plt.plot(epoch_train_losses, c='b', label='Train loss')
 plt.plot(epoch_val_losses, c='r', label='Validation loss')
 plt.legend(); plt.grid(); plt.xlabel('Epochs'); plt.ylabel('Loss'); plt.title('Training and Validation Loss')
+plt.savefig('results/loss_curves.png', dpi=300)
 plt.show()
-
+plt.close()
 
 # VISUALIZE FEATURE MAPS
 print("\n--- Visualizing Feature Maps ---")
