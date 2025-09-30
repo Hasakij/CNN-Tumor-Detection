@@ -1,0 +1,12 @@
+# Please install PyTorch and torchvision separately first, following the
+# instructions from the official PyTorch website: https://pytorch.org/
+# Example for CUDA 12.1:
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+kagglehub==0.3.13
+matplotlib==3.10.6
+numpy==2.3.3
+opencv_python==4.12.0.88
+scikit_learn==1.7.2
+seaborn==0.13.2
+# torch is installed separately
+torchvision
