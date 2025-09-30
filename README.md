@@ -11,19 +11,44 @@ See `requirements.txt` for a full list of dependencies. Main requirements:
 - PyTorch
 - torchvision
 - scikit-learn
-- opencv-python
+- OpenCV (opencv-python)
+- Matplotlib & Seaborn (for plotting)
+- KaggleHub (for data download)
 
 ## Installation
-```bash
-pip install -r requirements.txt
-```
+Follow these steps to set up the project environment.
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/YOUR_USERNAME/CNN-Tumor-Detection.git
+    cd CNN-Tumor-Detection
+    ```
+
+2.  **(Recommended) Create and activate a virtual environment:**
+    For Conda:
+    ```bash
+    conda create --name mri_env python=3.10
+    conda activate mri_env
+    ```
+
+3.  **Install PyTorch:**
+    This project was developed using PyTorch with **CUDA 12.1**. Please visit the [official PyTorch website](https://pytorch.org/get-started/locally/) to find the installation command that matches your system's hardware (CUDA or CPU).
+
+    The recommended command for a CUDA 12.1 environment is:
+    ```bash
+    pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+    ```
+
+4.  **Install other dependencies:**
+    Once PyTorch is installed, install the rest of the required packages using the `requirements.txt` file:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 ## Usage
-Train the CNN classification model:
-```bash
-python train.py
-```
 
+To train the model and generate evaluation results, run the main script:```bash
+python train.py
 ## Project Structure
 ```
 CNN-Tumor-Detection/
