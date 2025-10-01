@@ -145,3 +145,4 @@ datasets/
 # OS
 .DS_Store
 Thumbs.db
+trainn.py
