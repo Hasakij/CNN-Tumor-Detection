@@ -1,10 +1,17 @@
-# CNN-Tumor-Detection
-Using PyTorch to analyze brain MRI images. This repository explores two approaches: a simple CNN model to classify images (tumor/no tumor) and a Faster R-CNN model to detect and locate the tumor's position.
+# Brain Tumor Classification using a Convolutional Neural Network
+
+This repository contains a PyTorch implementation of a Convolutional Neural Network (CNN) for multi-class brain tumor classification from MRI scans. The model is trained to distinguish between four different classes: **Glioma**, **Meningioma**, **Pituitary** tumor, and **No Tumor**.
 
 ## Overview
-This project implements deep learning approaches for brain tumor detection from MRI scans:
-- **Classification**: A Convolutional Neural Network (CNN) to classify MRI images as tumor or no tumor
-- **Object Detection** (planned): Faster R-CNN for precise tumor localization and bounding box detection
+
+This project implements a deep learning approach for the classification of brain tumors from MRI images.
+
+-   **Multi-Class Classification**: A custom CNN is built from scratch and trained to classify MRI images into one of four categories:
+    -  Glioma
+    -  Meningioma
+    -  No Tumor
+    -  Pituitary
+-   **Architecture**: The model uses a standard CNN architecture with convolutional layers for feature extraction (enhanced with Batch Normalization and ReLU activations) and fully connected layers for the final classification.
 
 ## Requirements
 See `requirements.txt` for a full list of dependencies. Main requirements:
@@ -36,7 +43,7 @@ Follow these steps to set up the project environment.
 
     The recommended command for a CUDA 12.1 environment is:
     ```bash
-    pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+    pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
     ```
 
 4.  **Install other dependencies:**
@@ -47,8 +54,10 @@ Follow these steps to set up the project environment.
 
 ## Usage
 
-To train the model and generate evaluation results, run the main script:```bash
+To train the model and generate evaluation results, run the main script:
+```bash
 python train.py
+```
 ## Project Structure
 ```
 CNN-Tumor-Detection/
@@ -61,9 +70,6 @@ CNN-Tumor-Detection/
 
 ## Future Plans
 - Implement Faster R-CNN for object detection to locate tumor regions
-- Add data preprocessing and augmentation
-- Develop evaluation metrics and visualization tools
-- Create inference scripts for model deployment
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
