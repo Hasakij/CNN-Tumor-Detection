@@ -58,18 +58,34 @@ To train the model and generate evaluation results, run the main script:
 ```bash
 python train.py
 ```
+
+## Training the YOLO Model
+
+To train the model, first run the script to organize the dataset into YOLO format:
+```bash
+python organize_data.py
+```
+
+After the dataset is ready, start the training
+```bash
+python train_yolo.py
+```
+## Training Results
+
+Live results, charts, and metrics for this model are tracked using Comet ML.
+
+**[View project on Comet ML](https://www.comet.com/hasakij/comet-yolo11-mri)**
 ## Project Structure
 ```
 CNN-Tumor-Detection/
 ├── README.md           # Project documentation
 ├── requirements.txt    # Python dependencies
-├── LICENSE            # MIT License
-├── train.py           # Training script for CNN model
-└── .gitignore         # Git ignore patterns
+├── LICENSE             # MIT License
+├── train.py            # Training script for CNN model
+├── organize_data.py    # Organizes data for YOLO format
+├── train_yolo.py       # Training the YOLO model
+└── .gitignore          # Git ignore patterns
 ```
-
-## Future Plans
-- Implement Faster R-CNN for object detection to locate tumor regions
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
